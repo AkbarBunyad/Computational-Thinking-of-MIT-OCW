@@ -36,6 +36,7 @@ def matrix_rank(A):
         
         # making all other entries 0 in this column
         for i in range(rows):
+            # skipping the pivot row itself and only modifying the rows with non-zero entries in the (pivot) column to avoid redundant operation
             if i != rank and working_matrix[i][col] != 0:
                 factor = working_matrix[i][col]
                 for j in range(cols):
